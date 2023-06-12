@@ -20,10 +20,7 @@ public class EStoque{
             System.out.println("opção 3: Ração Gram ");
             opcao = scanner.nextInt();
 
-            switch (opcao) {
-            default:
-            System.out.println("\nopção invalida "); 
-            break;}
+           
             } while (opcao <1 || opcao > 3 );
         
         

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadrastro teste</title>
+
+</head>
+
+<body bgcolor="#FFFFF">
+
+    <font color="blue">
+
+        <h2> <strong> Cadastro de usuario </h2>
+        <form action= "/cadastro" method="post">
+        </font>
+        <br>
+    
+        <label for="name"> NOME:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="email" id="nome" name="nome" required>
+        <br>
+        <label for="Data de nacimento"> Data de nacimento:</label>
+        <input id="date" type="date">
+        <br>
+        
+        <label> Genero:</label>
+       
+        <input type="radio" id="Generomasculino" name="Genero" value="masculino" required>
+        <label for="Generomasculino">masculino</label>
+      
+       <input type="radio" id="generofeminino" name="Genero" value="feminino" required>
+       <label for="generofeminino">feminino</label>
+       
+       
+       <input type="radio" id="generoHelicopterodecombate" name="Genero" value="Helicopterodecombate" required>
+       <label for="generoHelicopterodecombate">Helicopterodecombate</label>
+       <br>
+       
+       <label for="senha"> senha:</label>
+       <input type="password" id="confirmarsenha" name="confirmarsenha" required>
+       <br>
+       
+       <label for="cidade">cidade:</label>
+       <input type="text" id="cidade" naem="cidade" required>
+       <br>
+    
+      <label for="estado">estado:</label>
+        
+      <select id="estado" name="estado"required>
+          <option value="" disabled selected>selecione um estado</option>
+          <option value="SP">São paulo</option>
+          <option value="RJ">Rio de janeiro</option>
+          <option value="MG">Minas gerais</option>
+          <option value="PB">Paraiba</option>
+          <option value="ES">Espirito santo</option>
+          
+            <!--Adicione todas as outras opções de estado aqui--> 
+          
+      </select>
+     
+      <br>
+      <label for="tel">Numero para contato:</label>
+      <input type="tel">
+      <br>
+
+
+      <label for="senha"> senha:</label>
+      <input type="password" id="confirmarsenha" name="confirmarsenha" required>
+      <br>
+      
+      <br>
+    
+         <input type="submit" value="cadastra">
+    
+    </form>
+    
+
+</body>
+
+</html>

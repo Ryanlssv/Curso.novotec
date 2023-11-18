@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>javascrip</title>
+  </head>
+  <body>
+  <h1><p id="msg"> </p></h1>
+  <button onclick="mostramensagem()">Bom Dia</button>
+
+  <center><h1>Bem vindo</h1></center>
+  <script>
+
+    var element = document.getElementById("msg");
+    //Definir a frase ola mundo
+    element.textContent= "ola mundo";
+
+    function mostramensagem() {
+    alert("ola mundo");  
+    }
+  </script>
+
+    <h2><p id="mais">adição</p><br>
+    <p id="menos">subtração</p><br>
+    <p id="multiplica">multiplicação</p><br>
+    <p id="divide">divisão</p><br></h2>
+  <script>
+
+    function adição(a,b){
+      return a+b
+    }
+
+    var somando = document.getElementById("mais");
+    somando.textContent= adição(1,3);
+
+    function subtração(c,d){
+      return c-d
+    }
+
+    function multiplica(e,f){
+      return e*f
+    }
+
+    function divisão(g,h){
+      return g/h
+    }
+
+    
+  </script>
+<script type="module " src ></script>
+  </body>
+  </html>

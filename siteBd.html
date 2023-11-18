@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" type="text/css" href="Funciona.css">
+</head>
+<body bgcolor="#D6D5D3">
+
+<div class="menu">
+   <h1>Lista de cliente</h1>
+   <ul id="cliente-list">
+   <!--os clientes serão exibidos aqui-->
+   </ul>
+</div>
+
+<div class="f">
+  <h2>Cadastra cliente</h2>
+  <form id="cliente-form"> <!-- Corrigido o ID do formulário -->
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome"  name="nome" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    
+    <br><input type="submit" value="Adicionar cliente"> 
+  </form>
+ 
+   <h2>Remover cliente</h2>
+   <form id="remove-form">
+    
+    <label for="id">ID cliente:</label>
+    <input type="number" id="id" name="id" required>
+    <br>
+    <br><input type="button" value="Remover cliente" onclick="removerCliente()">
+   </form>
+</div>
+
+<script>
+var db = openDatabase('teste.db','1.0','Meu banco de dados',2*1024*1024);
+db.transaction(function(tx){
+   tx.executeSql('CREATE TABLE IF NOT EXISTS cliente (id INTEGER PRIMARY KEY, nome TEXT, email TEXT)');
+});
+
+function loadCliente(){
+   db.transaction(function(tx) {
+      tx.executeSql('SELECT * FROM cliente', [], function(tx, results){
+         var clientelist = document.getElementById('cliente-list');
+         clientelist.innerHTML = '';
+
+         var len = results.rows.length; // Corrigido o nome da propriedade
+         for (var i = 0; i < len; i++){
+            var cliente = results.rows.item(i);
+            var listItem = document.createElement('li');
+            listItem.textContent = 'ID: ' + cliente.id + ', Nome: ' + cliente.nome + ', Email: ' + cliente.email;
+            clientelist.appendChild(listItem);
+         }
+      });
+   });
+}
+
+window.onload = loadCliente; // Corrigido o chamado da função loadCliente
+
+document.getElementById('cliente-form').addEventListener('submit', function(e){
+   e.preventDefault();
+   var nome = document.getElementById('nome').value;
+   var email = document.getElementById('email').value;
+   
+   db.transaction(function(tx){
+      tx.executeSql('INSERT INTO cliente (nome, email) VALUES (?, ?)', [nome, email], function(){
+         console.log('Cliente inserido com sucesso!');
+         loadCliente();
+         document.getElementById('nome').value = '';
+         document.getElementById('email').value = '';
+      }, function(err) {
+         console.error('Erro ao inserir cliente', err);
+      });
+   });
+});
+
+function removerCliente(){
+   var id = document.getElementById('id').value;
+
+   db.transaction(function(tx){
+      tx.executeSql('DELETE FROM cliente WHERE id = ?', [id], function(){
+         console.log('Cliente removido com sucesso!');
+         loadCliente();
+      }, function(err) {
+         console.error('Erro ao remover cliente:', err);
+      });
+   });
+}
+</script>
+
+</body>
+</html>

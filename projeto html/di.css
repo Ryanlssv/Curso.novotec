@@ -1,0 +1,160 @@
+#menu{
+position: absolute;
+text-align: center;
+background-color: rgb(179, 2, 2);
+color: rgb(255, 255, 255);
+font-size: 80px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+top: 00%;
+left: 00%;
+width: 100%;
+}
+
+
+#carro1{
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 110%;
+  left: 15%;
+  
+}
+#telefone{
+  
+  position: absolute;
+  height: 4%;
+  width: 3.5%;
+  top: 2.5%;
+  left: 76%;
+}
+
+#logo{
+
+  position: absolute;
+  height: 13%;
+  width: 12%;
+  top: 0%;
+  left: 44%;
+    
+}
+
+
+#carro2{
+    position: absolute;
+    height: 10%;
+    width: 5%;
+    top: 110%;
+    left: 75%;
+    
+}
+
+#local{
+    position: absolute;
+    height: 7%;
+    width: 4%;
+    top: 201%;
+    left: 37%;
+    
+}
+
+.contato{
+color: rgb(255, 255, 255);
+ position: absolute;
+ height: 10%;
+ width: 10%;
+ top: 3.5%;
+ left: 80%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+.localização{
+ text-align: center;
+ color: rgb(255, 255, 255);
+ background-color: rgb(179, 2, 2);
+ position: absolute;
+ height: 10%;
+ width: 100%;
+ top: 200%;
+ left: 0%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+#imgdentro{
+ position: absolute;
+ height: 90%;
+ width: 100%;
+ top: 9%;
+ left: 0%;
+}
+
+#bemvindo{
+ background-color: rgba(0, 0, 0, 0.589);
+ text-align: center;
+ color: rgba(247, 235, 235, 0.966);
+ position: absolute;
+ height: 90%;
+ width: 100%;
+ top: 9%;
+ left: 0%;
+ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-size: 130px;
+}
+
+.serviços{
+  color: rgb(251, 251, 252);
+  text-align: center;
+  font-size: 50px;
+  background-color: rgb(179, 2, 2);
+  position:absolute;
+  height: 7%;
+  width: 100%;
+  top: 95%;
+  left: 0%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.soli{
+  position: absolute;
+  height: 25%;
+  width: 15%;
+  top: 180%;
+  left: 44%;
+  
+}
+
+.serviço1{
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  top: 125%;
+  left: 5%;
+  font-size: 28px;
+}
+
+.serviço2{
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  top: 125%;
+  left: 70%;
+  font-size: 28px;
+}
+
+#carro3{
+  
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  top: 110%;
+  left: 47%;
+  
+}
+
+.suport{
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  top: 125%;
+  left: 38%;
+  font-size: 28px;
+}
